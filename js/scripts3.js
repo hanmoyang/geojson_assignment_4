@@ -60,14 +60,3 @@ $.getJSON('data/data.geojson', function(jqueryData) {
   }).addTo(map);
 }) 
 
- console.log('Here is the data we got using jQuery', jqueryData)
-  L.geoJson(jqueryData, {
-    pointToLayer: function (feature, latlng) {
-      return L.circleMarker(latlng, {
-        color: 'orange',
-        fillColor: 'steelblue',
-        fillOpacity: .9,
-        weight: 1,
-      });
-    }
-  }).addTo(map);
